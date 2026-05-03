@@ -1,0 +1,147 @@
+Microsoft Windows [Version 10.0.26200.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\36318>git --version
+git version 2.54.0.windows.1
+
+C:\Users\36318>git config --global user.name "rahulg0797"
+
+C:\Users\36318>git config --global user.name "gopalrahul77@gmail.com"
+
+C:\Users\36318>git config --global user.name "rahulg0797"
+
+C:\Users\36318>git config --global user.email "gopalrahul77@gmail.com"
+
+C:\Users\36318>git --list
+unknown option: --list
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]
+           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]
+           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+C:\Users\36318>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=schannel
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=rahulg0797
+user.email=gopalrahul77@gmail.com
+
+C:\Users\36318>d:
+
+D:\>cd MyGit
+
+D:\MyGit>git init
+Initialized empty Git repository in D:/MyGit/.git/
+
+D:\MyGit>git add .
+
+D:\MyGit>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   test.txt
+
+
+D:\MyGit>git commit
+[master (root-commit) 3428aed] git config --list#
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+
+D:\MyGit>git commit -m "what"
+On branch master
+nothing to commit, working tree clean
+
+D:\MyGit>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\MyGit>git log
+commit 3428aed6887f2b2c87475137e722cded9ff5b5b9 (HEAD -> master)
+Author: rahulg0797 <gopalrahul77@gmail.com>
+Date:   Sun May 3 14:05:23 2026 +0530
+
+    git config --list#
+
+D:\MyGit>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=schannel
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=rahulg0797
+user.email=gopalrahul77@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+D:\MyGit>git remote add origin https://github.com/rahulg0797/MyGit.git
+
+D:\MyGit>git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/rahulg0797/MyGit.git'
+
+D:\MyGit>git push -u orgin main
+error: src refspec main does not match any
+error: failed to push some refs to 'orgin'
+
+D:\MyGit>git branch -M main
+
+D:\MyGit>git push -u orgin main
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\MyGit>git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 215 bytes | 215.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/rahulg0797/MyGit.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+D:\MyGit>git pull origin main
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 957 bytes | 119.00 KiB/s, done.
+From https://github.com/rahulg0797/MyGit
+ * branch            main       -> FETCH_HEAD
+   3428aed..d255a31  main       -> origin/main
+Updating 3428aed..d255a31
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+D:\MyGit>
